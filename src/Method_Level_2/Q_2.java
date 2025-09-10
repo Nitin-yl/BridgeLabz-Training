@@ -1,0 +1,41 @@
+package Method_Level_2;
+
+import java.util.*;
+
+public class Q_2 {
+	public static int sumRecursive(int n) {
+	    if (n == 1) {
+	      return 1;
+	    }
+	    return n + sumRecursive(n - 1);
+	  }
+
+	  public static int sumFormula(int n) {
+	    return n * (n + 1) / 2;
+	  }
+
+	  public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+
+	    System.out.print("Enter a natural number: ");
+	    int n = sc.nextInt();
+
+	    if (n <= 0) {
+	      System.out.println("Please enter a natural number greater than 0.");
+	      return;
+	    }
+
+	    int sumRec = sumRecursive(n);
+
+	    int sumForm = sumFormula(n);
+
+	    System.out.println("Sum of first " + n + " natural numbers using recursion: " + sumRec);
+	    System.out.println("Sum of first " + n + " natural numbers using formula: " + sumForm);
+
+	    if (sumRec == sumForm) {
+	      System.out.println("Both methods give the same result.");
+	    } else {
+	      System.out.println("Results do not match.");
+	    }
+	  }
+}
