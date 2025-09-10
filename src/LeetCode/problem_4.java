@@ -15,6 +15,8 @@ public class problem_4 {
                 }
                 int d = arr[i] - min;
                 max = Math.max(max, d);
+                
+                
             }
             return max;
         }
@@ -22,7 +24,7 @@ public class problem_4 {
 
     public static void main(String... args) {
         Solution sol = new Solution();
-
+        
         int[] prices = {7, 1, 5, 3, 6, 4};
 
         System.out.println("Stock prices: " + Arrays.toString(prices));
